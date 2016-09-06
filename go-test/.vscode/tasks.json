@@ -1,0 +1,29 @@
+{
+"version": "0.1.0",
+"isShellCommand": true,
+"showOutput": "always",
+"command": "go",
+"echoCommand": true ,
+"tasks": [
+    {
+        "taskName": "run",
+        "args": [
+            "${file}"
+        ],
+        "isBuildCommand": true
+    },
+    {
+        "taskName": "build",
+        "args": [
+            "${file}"
+        ],
+        "isBuildCommand": true
+    },
+    {
+        "taskName": "fmt",
+        "args": [
+            "${file}"
+        ]
+    }
+]
+}

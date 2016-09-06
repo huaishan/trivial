@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="true" name="HandheldFriendly">
+    <title>hello</title>
+    <script type="text/javascript" src="package/vue.js"></script>
+</head>
+
+<body>
+    <!-- <div id="app">
+      <input v-model="newTodo" v-on:keyup.enter="addTodo">
+      <ul>
+        <li v-for="todo in todos">
+            <span>{{ todo.text }}</span>
+            <button v-on:click="removeTodo($index)">X</button>
+        </li>
+      </ul>
+    </div> -->
+    <!-- <div id="app">
+      <input v-model="newTodo" v-on:keyup.enter="addTodo">
+      <ul>
+        <li v-for="todo in todos">
+          <span>{{ todo.text }}</span>
+          <button v-on:click="removeTodo($index)">X</button>
+        </li>
+      </ul>
+    </div> -->
+    <!-- <div id="app">
+        <ul>
+            <li v-for="todo in todos">{{ todo.text }}</li>
+        </ul>
+    </div>
+    -->
+    <!-- <div id="app">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div> -->
+
+    <div id="app">
+        <input v-model="newTodo" @keyup.enter="addTodo"></input>
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{{ todo.text }}}</span>
+                <button @click="removeTodo($index)">X</button>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="hello.js"></script>
+</body>
+
+</html>
+
+linux发行版本  python优点  NoSQL的优点
