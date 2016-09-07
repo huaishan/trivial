@@ -1,0 +1,46 @@
+{
+    "success": true,
+    "title": {
+        "text": "概要",
+        "subtext": "我们的销售漏斗如下"
+    },
+    "legend": ["投放金额","成交量","有效咨询(电话)","回话量","点击率(全站UV)","全站PV", "渠道展现量"],
+    "y_axis_data": ["2016-09-07"],
+    "series_data": [
+        {
+            "name": "投放金额",
+            "type": "bar",
+            "data": [20000]
+        },
+        {
+            "name": "成交量",
+            "type": "bar",
+            "data": [3000]
+        },
+        {
+            "name": "有效咨询(电话)",
+            "type": "bar",
+            "data": [10000]
+        },
+        {
+            "name": "回话量",
+            "type": "bar",
+            "data": [20000]
+        },
+        {
+            "name": "点击率(全站UV)",
+            "type": "bar",
+            "data": [20000]
+        },
+        {
+            "name": "全站PV",
+            "type": "bar",
+            "data": [30000]
+        },
+        {
+            "name": "渠道展现量",
+            "type": "bar",
+            "data": [31000]
+        }
+    ]
+}
