@@ -55,7 +55,7 @@ function buildOption(data) {
 function loadData(chart) {
 
     $.ajax({
-        url: '/exp.json',
+        url: '/exp2.json',
         data: {},
         dataType: 'json',
         type: 'GET',
@@ -68,12 +68,12 @@ function loadData(chart) {
                 insertData(chart, temp);
                 
                 setData2Input(data, "main_data");
+                chart.hideLoading();
             } else {
                 layer.msg('获取数据失败，请刷新重试。', {time: 2000, icon: 5});
             }
         },
         error: function () {
-            chart.hideLoading();
             layer.msg('服务器异常，请刷新重试。', {time: 1000, icon: 5});
         }
     })
@@ -81,7 +81,6 @@ function loadData(chart) {
 
 function insertData(chart, data) {
     chart.clear();
-    chart.hideLoading();
     chart.setOption(data);
 }
 
@@ -91,11 +90,12 @@ function setData2Input(data, input_id) {
 
 function removeY(chart, index, input_id) {
     var data = JSON.parse($('#'+input_id).val());
-    data.y_axis_data.remove(index);
+    data.y_axis_data.splice(index, 1);
     data.series_data.forEach(function(element) {
-        this.data = this.data.remove(index)
+        element.data.splice(index, 1)
     }, this);
     insertData(chart, buildOption(data));
+    setData2Input(data, "main_data");
 }
 
 // 初始化图表大小
