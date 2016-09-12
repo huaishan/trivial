@@ -1,0 +1,144 @@
+.b_top, .b_top .b_promoteText {
+    color: #444;
+}
+
+.bm_box {
+    border: 1px solid #cdcdcd;
+    padding: 5px 10px;
+    margin: 3px 0 40px 0;
+    width: 340px;
+}
+
+#rcCalB {
+    direction: ltr;
+}
+
+.rcExpC {
+    height: 19px;
+    display: block;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+#rcEqB {
+    cursor: pointer;
+    float: right;
+    text-align: right;
+}
+
+.rcResC.b_focusTextMedium {
+    height: 58px;
+    padding-bottom: 8px;
+}
+
+.b_focusTextMedium {
+    font: 32px/1.2em 'Microsoft YaHei',Arial,Helvetica,sans-serif;
+}
+
+.b_focusTextMedium {
+    font-size: 40px;
+}
+
+.rcResI {
+    height: 90%;
+}
+
+.rcABPfocus {
+    border: 1px solid #0072c5;
+    background-color: #fff;
+    padding-top: 3px;
+}
+
+.rcABP {
+    overflow: hidden;
+    padding-right: 10px;
+    height: 100%;
+    color: #111;
+    border-right: 1px solid #bfdcf0;
+    border-bottom: 1px solid #bfdcf0;
+    border-left: 1px solid #bfdcf0;
+    border-top: 4px solid #0072c5;
+    background-color: #f2f8fc;
+}
+
+#rcTB {
+    float: right;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+#rcCalB input {
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.rcOptB {
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.rcOptB:hover {
+    background-color: #bbb;
+    border: 1px solid #bbb;
+}
+
+.rcOptB:active {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.rcOpdB {
+    background-color: #d1d1d1;
+    color: #111;
+    border: 1px solid #c1c1c1;
+}
+
+.rcOpdB:hover {
+    background-color: #bbb;
+    border: 1px solid #bbb;
+}
+
+.rcOpdB:active {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.rcRB {
+    background-color: #0072c5;
+    color: #fff;
+    border: 1px solid #0072c5;
+}
+
+.rcRB:hover {
+    background-color: #005b9e;
+    border: 1px solid #005b9e;
+}
+
+.rcRB:active {
+    background-color: #004476;
+    border: 1px solid #004476;
+}
+
+#rcBB {
+    background-image: url('../calc/back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.b_xlText {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.b_focusTextExtraSmall, .b_xlText {
+    font: 24px/1.2em 'Microsoft YaHei',Arial,Helvetica,sans-serif;
+}
+
+table {
+    /*width: 100%;*/
+    word-wrap: break-word;
+}

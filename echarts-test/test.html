@@ -5,14 +5,66 @@
     <script src="jquery.js"></script>
     <script src="layer/layer.js"></script>
     <script src="echarts.js"></script>
+    <link rel="stylesheet" href="css/calc.css">
 </header>
 
 <body>
     <div id="main"></div>
-    <div>
-        
-    </div>
+    <div></div>
     <input type="hidden" id="main_data" value="">
+
+    <div class="bm_box">
+        <div class="b_vPanel">
+            <div id="rcCalB" tabindex="1">
+                <!--<div class="rcExpC">
+                    <div class="nowrap" id="rcEqB">0</div>
+                </div>-->
+                <div class="rcResC b_focusTextMedium">
+                    <div class="rcResI">
+                        <div class="rcABP">
+                            <span class="nowrap" id="rcTB">pv</span>
+                            <span class="nowrap" id="rcTB">+</span>
+                            <span class="nowrap" id="rcTB">uv</span>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input class="rcOptB b_focusTextExtraSmall" id="rcLB" type="button" value="("></td>
+                            <td><input class="rcOptB b_focusTextExtraSmall" id="rcRB" type="button" value=")"></td>
+                            <td><input class="rcOptB b_focusTextExtraSmall" id="rcClD" type="button" value="C"></td>
+                            <td><input class="rcOptB" id="rcBB" type="button" title="后退"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="rcOpdB b_xlText" id="rcSeven" type="button" value="pv"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcEight" type="button" value="uv"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcNine" type="button" value="ip"></td>
+                            <td><input class="b_xlText rcOptB" id="rcDiv" type="button" value="÷"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="rcOpdB b_xlText" id="rcFour" type="button" value="4"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcFive" type="button" value="5"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcSix" type="button" value="6"></td>
+                            <td><input class="b_xlText rcOptB" id="rcMul" type="button" value="×"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="rcOpdB b_xlText" id="rcOne" type="button" value="1"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcTwo" type="button" value="2"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcThree" type="button" value="3"></td>
+                            <td><input class="b_xlText rcOptB" id="rcSub" type="button" value="−"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="rcOpdB b_xlText" id="rcZero" type="button" value="0"></td>
+                            <td><input class="rcOpdB b_xlText" id="rcDeci" type="button" value="."></td>
+                            <td><input class="rcRB b_xlText" id="rcEquals" type="button" value="="></td>
+                            <td><input class="b_xlText rcOptB" id="rcAdd" type="button" value="+"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="test.js"></script>
