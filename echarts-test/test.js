@@ -13,7 +13,7 @@ function showBaseFrame(chart) {
         },
         yAxis: {
             type: 'category',
-            data: []
+            data: [0]
         }
     }
     chart.setOption(baseOpt);
