@@ -88,14 +88,19 @@ function setData2Input(data, input_id) {
     $('#'+input_id).val(JSON.stringify(data));
 }
 
-function removeY(chart, index, input_id) {
-    var data = JSON.parse($('#'+input_id).val());
-    data.y_axis_data.splice(index, 1);
-    data.series_data.forEach(function(element) {
-        element.data.splice(index, 1)
-    }, this);
+function removeY(chart, vals) {
+
+    var data = JSON.parse($('#main_data').val());
+    for (var i = 0; i < vals.length; i++) {
+        var val = vals[i];
+        var index = jQuery.inArray(val, data.y_axis_data);
+
+        data.y_axis_data.splice(index, 1);
+        data.series_data.forEach(function(element) {
+            element.data.splice(index, 1)
+        }, this);
+    }
     insertData(chart, buildOption(data));
-    setData2Input(data, "main_data");
 }
 
 // 初始化图表大小
