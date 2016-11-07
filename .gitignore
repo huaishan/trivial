@@ -1,0 +1,9 @@
+# Python
+*.py[co]
+
+# idea
+.idea
+
+# nodejs
+node_modules/
+react-demos/demo13/node_modules/
