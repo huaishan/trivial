@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy import log
+from scrapy.http.request import Request
 
 from douyu.items import DouyuItem
 
@@ -8,13 +9,15 @@ from douyu.items import DouyuItem
 class AllSpider(scrapy.Spider):
     name = "all"
     allowed_domains = ["douyu.com"]
-    start_urls = ['https://www.douyu.com/directory/all?page=%s&isAjax=1' % i for i in range(1, 74)]
+    start_urls = ['https://www.douyu.com/directory/all']
 
     domain = 'https://www.douyu.com'
 
+    url_temp = 'https://www.douyu.com/directory/all?page={page}&isAjax=1'
+
     page_count = None
-    cur_page = 1
-    page_count_rule = "//div[@class='tcd-page-code']/a[@class='shark-pager-item'][last()]/text()"
+    cur_page = 0
+    page_count_rule = "//a[@data-href='/directory/all']/@data-pagecount"
 
     def check_page_count(self, response):
         if not self.page_count:
@@ -23,18 +26,21 @@ class AllSpider(scrapy.Spider):
     def parse(self, response):
         log.msg('Parse '+response.url)
 
-        # with open('douyu.html', 'wb') as f:
-        #     f.write(response.body)
-        #
-        # return response.body
+        self.check_page_count(response)
 
-        # self.check_page_count(response)
+        for i in range(1, self.page_count+1):
+            yield Request(url=self.url_temp.format(page=i), callback=self.parse_item)
 
+    @staticmethod
+    def get_list(l):
+        return l[0] if l else ''
+
+    def parse_item(self, response):
         for sel in response.xpath("//li"):
             item = DouyuItem()
-            item['url'] = self.domain + sel.xpath("a/@href").extract()[0]
-            item['room_name'] = sel.xpath("a/@title").extract()[0]
-            item['tag'] = sel.xpath("a/div/div/span/text()").extract()[0]
-            item['people_count'] = sel.xpath("a/div/p/span[@class='dy-num fr']/text()").extract()[0]
-            item['anchor'] = sel.xpath("a/div/p/span[@class='dy-name ellipsis fl']/text()").extract()[0]
+            item['url'] = self.domain + self.get_list(sel.xpath("a/@href").extract())
+            item['room_name'] = self.get_list(sel.xpath("a/@title").extract())
+            item['tag'] = self.get_list(sel.xpath("a/div/div/span/text()").extract())
+            item['people_count'] = self.get_list(sel.xpath("a/div/p/span[@class='dy-num fr']/text()").extract())
+            item['anchor'] = self.get_list(sel.xpath("a/div/p/span[@class='dy-name ellipsis fl']/text()").extract())
             yield item
