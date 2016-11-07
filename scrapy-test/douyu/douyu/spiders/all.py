@@ -12,11 +12,9 @@ class AllSpider(scrapy.Spider):
     start_urls = ['https://www.douyu.com/directory/all']
 
     domain = 'https://www.douyu.com'
-
     url_temp = 'https://www.douyu.com/directory/all?page={page}&isAjax=1'
 
     page_count = None
-    cur_page = 0
     page_count_rule = "//a[@data-href='/directory/all']/@data-pagecount"
 
     def check_page_count(self, response):

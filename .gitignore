@@ -7,3 +7,6 @@
 # nodejs
 node_modules/
 react-demos/demo13/node_modules/
+
+# scrapy
+*.json
