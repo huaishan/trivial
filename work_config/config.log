@@ -1,0 +1,8 @@
+Gnome 扩展：
+Dash To Dock: 让Dash显示子啊自定义位置，比如下方
+Clipboard Indicator： 剪贴板历史
+Hide top bar: 自动隐藏顶栏
+Coverflow Alt-Tab： 扩展Alt-Tab
+
+设置zsh为默认shell：
+chsh -s /bin/zsh
