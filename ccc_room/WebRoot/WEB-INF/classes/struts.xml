@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="myTokenStack">
+				<interceptor-ref name="token"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myTokenStack"></default-interceptor-ref>
+		
+		<action name="login" class="com.web.LoginAction">
+			<result name="success" type="redirect">chat.jsp</result>
+			<result name="input" type="redirect">index.jsp</result>
+			<result name="error">WEB-INF/LoginError.jsp</result>
+			<result name="invalid.token">WEB-INF/TokenError.jsp</result>
+		</action>
+		
+		<action name="register" class="com.web.RegisterAction">
+			<result name="success">WEB-INF/RegisterDone.jsp</result>
+			<result name="input">WEB-INF/RegisterError.jsp</result>
+		</action>
+		
+		<action name="logout" class="com.web.LogoutAction">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+		
+	</package>
+	
+ 	<package name="verify" extends="json-default">
+        <action name="usernameVerify" class="com.web.UsernameVerify" method="checkLogin">  
+            <result name="success" type="json">/index.jsp</result>
+        </action>  
+    </package> 
+    
+    <package name="online" extends="json-default">  
+        <action name="OnlinePeople" class="com.web.online.OnlinePeopleAction" method="getOnlinePeople">  
+            <result name="success" type="json">/chat.jsp</result>
+        </action>  
+    </package> 
+    
+    <package name="isLogout" extends="json-default">  
+        <action name="logoutB" class="com.web.LogoutAction">  
+            <result name="success" type="json">/chat.jsp</result>
+        </action>  
+    </package> 
+    
+    <package name="message" extends="json-default">
+		
+        <action name="sendMessage" class="com.web.message.SendMessageAction">  
+            <result name="success" type="json">/chat.jsp</result>
+            <result name="input" type="redirect">/index.jsp</result>
+        </action>   
+        <action name="getLastMessageId" class="com.web.message.TakeLastMessageIDAction" method="takeLastMessageId">  
+            <result name="success" type="json">/chat.jsp</result>
+        </action>
+        <action name="takeMessage" class="com.web.message.TakeMessageAction" method="takeNewMessage">  
+            <result name="success" type="json">/chat.jsp</result>
+        </action>
+    </package> 
+
+</struts>    

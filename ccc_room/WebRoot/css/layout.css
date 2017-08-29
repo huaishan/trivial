@@ -1,0 +1,209 @@
+::-webkit-scrollbar {
+	width:4px;/*//滚动条样式设定*/
+	height:2px;
+}
+::-webkit-scrollbar-thumb{
+	background-color:#71C3E2;
+}
+body{
+	font:500 15px/1.8 Lucida Sans Unicode, Microsoft JhengHei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    background-image:url("../images/bg.jpg");
+	opacity:0.99;
+	fifter:alpha(opacity=99);
+	text-align:center;
+}
+#main{
+	width:900px;
+	margin-top:2%;
+	margin-left:auto;
+	margin-right:auto;
+	height:80%;
+	height:600px;
+    /*box-shadow:20px 20px 50px 20px #888888;*/
+    box-shadow: 10px 10px 100px 10px rgba(30, 30, 30, 0.9);
+}
+#rpanel{
+	width:200px;
+	height:100%;
+	background-color:rgba(0, 0, 0, .698039);
+	float:left;
+}
+#lpanel{
+	width:693px;
+	height:100%;
+	background-color:rgba(255, 255, 255, .398039);
+	float:left;
+	position:relative;
+}
+#logo{
+	width:100%;
+	height:50px;
+	background-color:#FFFFFF;
+	border-bottom:3px solid E8E8E8;
+	float:left;
+}
+#logo2{
+	width:483px;
+	height:40px;
+	background-color:rgba(241, 241, 241, 0.598039);
+	border-bottom:1px solid E9E9E9;
+	border-top:2px solid E9E9E9;
+	float:left;
+	position:relative;
+	outline:#f8f8ff thick;
+}
+#logo3{
+	width:208px;
+	height:99%;
+	float:right;
+	background-color:rgba(248, 248, 255, .498039);
+	border:1px solid #DEDEDE;
+    outline:#f8f8ff thick;
+    overflow:hidden;
+    /*overflow-y:scroll;*/
+}
+#logo4{
+	width:480px;
+	height:490px;
+	position:relative;
+	top:0;
+	left:0;
+	overflow-y:scroll;
+	border-top: 1px solid #DEDEDE;
+	border-bottom: 1px solid #DEDEDE;
+	background-color: rgba(255, 255, 255, 0.398039);
+}
+#char1{
+	width:420px;
+	min-height:12px;
+	border-top:1px solid E9E9E9;
+	font-size:13px;
+	font-family:Microsoft JhengHei;
+	border-radius:5px;
+	float:left;
+	margin-top:7px;
+	margin-left:20px;
+	margin-bottom:7px;
+	background-color:#E7F1F6;
+	text-align:left;
+	overflow:hidden;
+	word-wrap:break-word;/*//自动换行*/
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .03), 0 1px 10px rgba(0, 0, 0, .20); /*聊天信息框阴影*/
+}
+#lchar{
+	/*margin: 2px;*/
+	margin-left: 8px;
+}
+#rchar{
+	float:right;
+	width:35px;
+	height:47px;
+	position:relative;
+	right:15px;
+}
+#rlchar{
+	float:left;
+	width:35px;
+	height:47px;
+}
+.lbutton{
+	width:65px;
+	height:25px;
+	margin-left:20px;
+	margin-top:8px;
+	float:left;
+	border:1px solid #DADADA;
+	border-radius:5px;
+	cursor: pointer;
+}
+.lbutton:active {
+	background-color: #f1f1f1;
+}
+
+.text3{
+	position:absolute;
+	bottom:20px;
+	left:90px;
+	width:250px;
+	height:35px;
+	line-height:35px;
+}
+.replayuser{
+	position:absolute;
+	bottom:25px;
+	left:30px;
+}
+
+label.username{
+	float:right;
+	margin-top:20px;
+	line-height:35px;
+	margin-right:30px;
+}
+label.title1{
+	position:absolute;
+	top:8px;
+	left:145px;
+	line-height:25px;
+	font-family:Microsoft JhengHei;
+	font-size:20px;
+}
+p.title2{
+	margin-left:52px;
+	margin-top:15px;
+	height:35px;
+	line-height:35px;
+	color:white;
+	font-family:Microsoft JhengHei;
+	font-size: 20px;
+	float:left;
+}
+.type{
+	background-color:rgba(0, 0, 0, .298039);
+	border-bottom:1px solid #25292E;
+	width:200px;
+	height:75px;
+	float:left;
+}
+input[type=button]{
+	width:80px;
+	height:30px;
+	border-radius:10px;
+	position:absolute;
+	bottom:25px;
+	right:250px;
+	color:white;
+	background-color:#0AA8E3;
+}
+.submit{
+	width:80px;
+	height:30px;
+	border-radius:10px;
+	position:absolute;
+	bottom:25px;
+	right:250px;
+	color:white;
+	background-color:#0AA8E3;
+}
+
+p.uat {
+	color: #2b94ff;
+	margin-left: 5px;
+}
+p.message {
+	/*padding: 5px;
+	margin: 5px;*/
+}
+div.online_head {
+	height: 39px;
+	border-bottom: 1px solid #DEDEDE;
+	font-size: 22px; 
+}
+div#online_people {
+	height:100%;
+	overflow:scroll;
+	color: #2b94ff;
+}
+p.people_name {
+	border-bottom: 1px solid #DEDEDE;
+}
